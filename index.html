@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no">
     <title>Document</title>
     <link rel="stylesheet" href="style2.css?v=4" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -12,6 +13,7 @@
     href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
     rel="stylesheet"
 />
+
     <style>
 
         img#image-3 {
@@ -105,20 +107,6 @@ img.imgbox {
 .circule-img img{
     width: 100%;
 }
-.sub-box {
-    /* background-image: url(./img/circule.png); */
-    height: 237px;
-    width: auto;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    background-color: rebeccapurple;
-    overflow: hidden;
-}
-
-
-
-
-
 
 
 
@@ -188,7 +176,19 @@ img.imgbox1 {
   z-index: 2;
   pointer-events: none;
 }
-
+.phone-icon-circle {
+  --size: clamp(11px, 1.2vw, 14px);
+  width: var(--size);
+  height: var(--size);
+  border: 1px solid #763736;
+  border-radius: 50%;
+  color: #763736;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: calc(2 * var(--size));
+  font-size: calc(var(--size) / 2);
+}
 @media screen and (max-width: 768px) {
 
 }
@@ -243,7 +243,7 @@ img.imgbox1 {
     .contact-box {
 
     gap: 5px;
-    font-size: 10px;
+    font-size: 11px;
     margin-top: 1px;
     font-weight: 800;
     margin-left: -3px;
@@ -258,7 +258,7 @@ img.imgbox1 {
 
 
 }
-}
+
 @media screen and (max-width: 375px) {
     img.imgbox {
         position: absolute;
@@ -355,7 +355,7 @@ img.imgbox1 {
     <h2>Gagan Bansode 123</h2>
     <h3>Software Developer</h3>
     <div class="contact-box">
-      <i class="ri-phone-fill"></i>
+      <i class="ri-phone-fill phone-icon-circle"></i>
       <span>7774991416</span>
     </div>
   </div>
